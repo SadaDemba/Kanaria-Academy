@@ -1,0 +1,71 @@
+.team-list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.TeamListTitle {
+    margin-bottom: 20px;
+    border-bottom: solid rgba(0, 103, 71, 1);
+    padding-bottom: 3px;
+    padding-left: 15px;
+}
+.member-data-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.member-list {
+    width: 50%;
+}
+.member-photo {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.member-photo.show {
+    opacity: 1;
+}
+.member {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 50px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    border-radius: 25px;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+.member:hover {
+    background-color: rgb(222, 224, 223);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.member-data {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.PpTeamMember {
+    width: 80px;
+    border-radius: 30%;
+}
+.ImageTeamMemeber {
+    max-width: 350px;
+    border-radius: 30px;
+    background-image: url(../../images/TeamKanaria/Backgrounnd.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dataText {
+    font-size: large;
+}

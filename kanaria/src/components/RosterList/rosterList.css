@@ -1,0 +1,79 @@
+.RosterList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.Rosterbox {
+    width: 20%;
+    min-width: 180px;
+    transition: all 0.2s ease-in-out;
+}
+ul,
+summary {
+    list-style-type: none;
+    padding: 0;
+}
+summary::marker {
+    color: #fff;
+    z-index: -5;
+}
+.Rosterbox:hover {
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .RosterList {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Rosterbox {
+        margin-top: 20px;
+        max-width: 70%;
+    }
+}
+.cardRoster {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out;
+    background-image: url(../../images/TeamKanaria/Backgrounnd.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardRoster:hover {
+    transform: scale(1.05);
+}
+.cardRoster img {
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-out;
+}
+.cardRoster:hover img {
+    filter: brightness(0.6);
+}
+.cardRoster-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.cardRoster:hover .cardRoster-content {
+    opacity: 1;
+}

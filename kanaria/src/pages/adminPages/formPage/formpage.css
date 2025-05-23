@@ -1,0 +1,1009 @@
+.form-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.form-details-header {
+    margin-bottom: 2rem;
+}
+
+.form-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.form-header-content h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Styles des sections */
+.form-details-section {
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-details-section h2 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.form-details-loading,
+.form-details-error,
+.responses-loading,
+.responses-error {
+    text-align: center;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 107, 84, 0.3);
+    /* Vert foncé */
+    border-radius: 50%;
+    border-top-color: #006B54;
+    /* Vert foncé */
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.status-active {
+    background-color: rgba(76, 175, 80, 0.15);
+    color: #2e7d32;
+}
+
+.status-inactive {
+    background-color: rgba(244, 67, 54, 0.15);
+    color: #c62828;
+}
+
+.form-tab {
+    padding: 1rem 0;
+}
+
+.form-info-section,
+.form-fields-section {
+    margin-bottom: 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info-label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.info-value {
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.info-icon {
+    margin-right: 0.5rem;
+    color: #666;
+}
+
+.fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.field-order {
+    width: 40px;
+    background-color: rgba(0, 107, 84, 0.2);
+    /* Vert foncé */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.field-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.field-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.field-type,
+.field-type-badge {
+    background-color: #f0f0f0;
+    color: #666;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.field-description {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.field-details {
+    font-size: 0.9rem;
+}
+
+.field-required {
+    background-color: rgba(0, 107, 84, 0.2);
+    /* Vert foncé */
+    color: #00553D;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.field-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.field-property {
+    padding: 0.2rem 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.field-property.required {
+    background-color: rgba(0, 107, 84, 0.2);
+    /* Vert foncé */
+    color: #00553D;
+}
+
+.field-options {
+    margin-top: 0.5rem;
+}
+
+.options-title {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.option-item {
+    padding: 0.2rem 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.empty-fields {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    color: #666;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+/* Styles pour l'onglet Réponses */
+.responses-tab {
+    padding: 1rem 0;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.search-box {
+    position: relative;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.responses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.response-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.response-card.unread {
+    border-left: 3px solid #006B54;
+    /* Vert foncé */
+}
+
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.response-email {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-icon {
+    color: #777;
+}
+
+.status-icon.unread {
+    color: #006B54;
+    /* Vert foncé */
+}
+
+.status-icon.read {
+    color: #7E7E7E;
+}
+
+.response-field {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.response-field:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+form-edit-content {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #FFCF17;
+    box-shadow: 0 0 0 2px rgba(255, 207, 23, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    gap: 0.5rem;
+    min-width: 120px;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    min-width: auto;
+}
+
+.btn-save {
+    background-color: #FFCF17;
+    color: #222;
+}
+
+.btn-save:hover {
+    background-color: #00382c;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-disabled {
+    background-color: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner-small {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s linear infinite;
+    margin-right: 0.5rem;
+}
+
+/* Styles pour l'infobulle */
+.form-label-with-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-icon-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.info-icon {
+    color: #888;
+    font-size: 1rem;
+    cursor: help;
+}
+
+.info-popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    z-index: 100;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.info-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Avertissement lorsque le formulaire ne peut pas être modifié */
+.warning-item {
+    grid-column: 1 / -1;
+    background-color: rgba(255, 207, 23, 0.15);
+    border-left: 3px solid #FFCF17;
+}
+
+.warning-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #333;
+}
+
+.warning-icon {
+    color: #FFCF17;
+    font-size: 1.2rem;
+}
+
+/* Styles pour l'éditeur de champs */
+.field-editor-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.field-editor-toolbar {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-editor-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.field-list {
+    margin-bottom: 1.5rem;
+}
+
+.field-editor-item {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.field-editor-header {
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.field-editor-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.field-editor-type {
+    font-size: 0.8rem;
+    background-color: #f0f0f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #555;
+}
+
+.field-editor-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #777;
+    font-size: 1rem;
+    transition: color 0.2s;
+    padding: 0.25rem;
+}
+
+.field-editor-actions button:hover {
+    color: #333;
+}
+
+.field-editor-actions .btn-delete:hover {
+    color: #d32f2f;
+}
+
+.field-editor-content {
+    padding: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.field-editor-options {
+    margin-top: 1rem;
+}
+
+.options-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.option-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.add-option-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #00382c;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+}
+
+.add-field-btn {
+    width: 100%;
+    padding: 1rem;
+    border: 2px dashed #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-field-btn:hover {
+    background-color: #f9f9f9;
+    border-color: #ccc;
+    color: #333;
+}
+
+.field-editor-bottom-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.responses-header {
+    margin-bottom: 1.5rem;
+}
+
+.responses-summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.responses-summary h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.unread-badge {
+    background-color: #FFCF17;
+    color: #222;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* Conteneur des réponses */
+.responses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Cartes de réponses améliorées */
+.response-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.response-card:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.response-card.unread {
+    border-left: 3px solid #FFCF17;
+}
+
+/* Header de la réponse cliquable */
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.response-header:hover {
+    background-color: #f1f1f1;
+}
+
+.response-header-left,
+.response-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.response-header-left {
+    gap: 0.5rem;
+}
+
+.response-header-right {
+    gap: 1rem;
+}
+
+.expand-icon {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.response-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.status-icon {
+    color: #777;
+}
+
+.status-icon.unread {
+    color: #FFCF17;
+}
+
+.status-icon.read {
+    color: #777;
+}
+
+/* Badge de statut */
+.response-status-badge {
+    min-width: 80px;
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+}
+
+.status-badge.unread {
+    background-color: rgba(255, 207, 23, 0.15);
+    color: #806600;
+}
+
+.status-badge.read {
+    background-color: rgba(0, 107, 84, 0.1);
+    color: #006B54;
+}
+
+.response-date {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Contenu des réponses */
+.response-content {
+    padding: 1.25rem;
+    border-top: 1px solid #eee;
+}
+
+.field-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field-value {
+    color: #333;
+    line-height: 1.5;
+    word-break: break-word;
+    background-color: #eaeaea;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.empty-value {
+    color: #888;
+    font-style: italic;
+}
+
+/* Actions */
+.response-actions {
+    padding: 0.5rem 1.25rem 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.empty-responses {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Styles pour les statistiques de réponses - à ajouter à formpage.css */
+
+.responses-summary {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.responses-summary h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.responses-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.stat-label {
+    color: #666;
+}
+
+.stat-value {
+    font-weight: 600;
+}
+
+.stat-value.read {
+    color: #006B54;
+}
+
+.stat-value.unread {
+    color: #806600;
+}
+
+/* Bouton de bascule du statut */
+.btn-toggle-status {
+    background-color: #f5f5f5;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-toggle-status:hover {
+    background-color: #e0e0e0;
+}
+
+/* Style pour la page active du bouton de pagination */
+.page-item.active {
+    background-color: #FFCF17;
+    color: #222;
+}
+
+/* Amélioration visuelle de la liste de réponses */
+.responses-list {
+    margin-top: 1.5rem;
+}
+
+.responses-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-details-container {
+        padding: 1rem;
+    }
+
+    .form-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-fields-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .form-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-status {
+        margin-top: 0.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .field-editor-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .response-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .response-header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

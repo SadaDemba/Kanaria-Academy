@@ -1,0 +1,48 @@
+# Étape de build
+FROM node:23-alpine AS build
+
+# Définition du répertoire de travail
+WORKDIR /app
+
+# Copie des fichiers package.json et package-lock.json
+COPY package*.json ./
+
+# Installation des dépendances
+RUN npm ci
+
+# Copier le reste des fichiers de l'application
+COPY . .
+
+# Variables d'environnement pour la phase de build
+ARG REACT_APP_BASE_API
+ENV REACT_APP_BASE_API=${REACT_APP_BASE_API}
+
+# Afficher les variables d'environnement pour le débogage
+RUN echo "REACT_APP_BASE_API=${REACT_APP_BASE_API}"
+
+# Build de l'application
+RUN npm run build && ls -la build
+
+# Étape de production avec Nginx
+FROM nginx:alpine
+
+# Copier la configuration Nginx personnalisée
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Créer un fichier pour vérifier que les fichiers sont correctement copiés
+RUN echo "Nginx configuration:" && cat /etc/nginx/conf.d/default.conf
+
+# Copier les fichiers buildés depuis l'étape précédente
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Copier le fichier de test
+COPY test.html /usr/share/nginx/html/test.html
+
+# Vérifier que les fichiers ont été copiés
+RUN ls -la /usr/share/nginx/html
+
+# Exposition du port
+EXPOSE 80
+
+# Commande de démarrage
+CMD ["nginx", "-g", "daemon off;"]

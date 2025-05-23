@@ -1,0 +1,46 @@
+services:
+  # Service backend
+  api:
+    build:
+      context: ./kanaria-api
+    container_name: kanaria-api
+    restart: unless-stopped
+    ports:
+      - "${API_PORT:-3000}:3000"
+    volumes:
+      - ./kanaria-api/public/uploads:/app/public/uploads
+      - ./kanaria-api/temp:/app/temp
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PWD=${ADMIN_PWD}
+      - DEFAULT_REFRESH_PWD=${DEFAULT_REFRESH_PWD}
+      - AZURE_STORAGE_CONNECTION_STRING=${AZURE_STORAGE_CONNECTION_STRING}
+      - AZURE_STORAGE_CONTAINER_NAME=${AZURE_STORAGE_CONTAINER_NAME}
+    # Commande simplifiée pour minimiser les problèmes
+    command: sh -c "npx prisma migrate deploy && node src/app.js"
+    networks:
+      - kanaria-network
+
+  # Service frontend
+  web:
+    build:
+      context: ./kanaria
+      args:
+        # Utiliser la variable d'environnement correcte
+        - REACT_APP_BASE_API=http://localhost:3000
+    container_name: kanaria-web
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-80}:80"
+    depends_on:
+      - api
+    networks:
+      - kanaria-network
+
+networks:
+  kanaria-network:
+    driver: bridge

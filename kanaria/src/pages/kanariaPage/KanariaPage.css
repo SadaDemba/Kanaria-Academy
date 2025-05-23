@@ -1,0 +1,47 @@
+.HeroHeaderCover {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+}
+
+/*---------- About Section ----------*/
+
+.aboutRoster {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.titleAboutRoster {
+    margin-bottom: 20px;
+}
+.textaboutRoster {
+    margin-bottom: 15px;
+}
+.AboutContainerRoster {
+    width: 100%;
+    margin-top: -150px;
+    z-index: 6;
+    margin-bottom: 120px;
+}
+.about-contentRoster {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 205, 3, 0.54) 0px 3px 8px;
+    z-index: 10;
+    position: sticky;
+}
+.about-content-textRoster {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}

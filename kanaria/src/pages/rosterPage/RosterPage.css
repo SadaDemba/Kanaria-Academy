@@ -1,0 +1,65 @@
+#roster {
+    background-color: #073c2f;
+}
+
+#titlePage {
+    padding-top: 2%;
+    text-align: center;
+    color: #073c2f;
+    font-size: 45px;
+}
+
+.team-page {
+    text-align: center;
+}
+
+.team-members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.imgMembre {
+    width: 250px;
+    height: 330px;
+    border-radius: 5px;
+}
+
+.infoMembre {
+    color: white;
+}
+
+.team-member {
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #ffcf17;
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+    border-radius: 8px;
+}
+
+.team-member img {
+    margin-bottom: 10px;
+}
+
+.team-member h2 {
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    margin: 5px 0;
+}
+
+.team-member.inactive {
+    opacity: 0.6;
+    filter: grayscale(100%);
+}
+
+.status-inactive {
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-top: 8px;
+}

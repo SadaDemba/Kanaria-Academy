@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+    container_name: kanaria-api
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    volumes:
+      - ./public/uploads:/app/public/uploads
+      - ./temp:/app/temp
+    environment:
+      - NODE_ENV=production
+      - PORT=${PORT:-3000}
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PWD=${ADMIN_PWD}
+      - DEFAULT_REFRESH_PWD=${DEFAULT_REFRESH_PWD}
+      - AZURE_STORAGE_CONNECTION_STRING=${AZURE_STORAGE_CONNECTION_STRING}
+      - AZURE_STORAGE_CONTAINER_NAME=${AZURE_STORAGE_CONTAINER_NAME}
+    networks:
+      - kanaria-network
+
+networks:
+  kanaria-network:
+    driver: bridge

@@ -1,0 +1,266 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    width: fit-content;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+
+.modal-form {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #FFCF17;
+}
+
+.form-group input.error,
+.form-group select.error {
+    border-color: #d63384;
+}
+
+.form-group input.disabled,
+.form-group select.disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.field-error {
+    color: #d63384;
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+}
+
+.field-help {
+    color: #777;
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+    display: block;
+}
+
+.form-error {
+    background-color: #f8d7da;
+    color: #d63384;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.cancel-btn,
+.submit-btn,
+.delete-btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.cancel-btn {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.cancel-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
+
+.submit-btn {
+    background-color: #FFCF17;
+    color: #333;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: #00382c;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #b02a37;
+    color: white;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background-color: #c82377;
+}
+
+.cancel-btn:disabled,
+.submit-btn:disabled,
+.delete-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Delete Modal */
+.delete-modal {
+    max-width: 450px;
+}
+
+.modal-content {
+    padding: 1.5rem;
+}
+
+.delete-warning {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.delete-info {
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+/* Styles pour le bouton de confirmation */
+.confirm-btn {
+    background-color: #FFCF17;
+    color: #333;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.confirm-btn:hover:not(:disabled) {
+    background-color: #00382c;
+    color: white;
+}
+
+.confirm-btn.activate {
+    background-color: #198754;
+    color: white;
+}
+
+.confirm-btn.activate:hover:not(:disabled) {
+    background-color: #157347;
+}
+
+.confirm-btn.deactivate {
+    background-color: #dc3545;
+    color: white;
+}
+
+.confirm-btn.deactivate:hover:not(:disabled) {
+    background-color: #bb2d3b;
+}
+
+.confirm-message {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.confirm-modal {
+    max-width: 450px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 90%;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .submit-btn,
+    .delete-btn {
+        width: 100%;
+    }
+}

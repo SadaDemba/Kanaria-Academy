@@ -1,0 +1,90 @@
+.Footercontainer,
+.FooterItemsListPage,
+.FooterItemsLogo,
+.FooterItemSocialMedia,
+.FooterItemsPartners,
+.ListPageItem {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Footercontainer {
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 30px;
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+    color: whitesmoke;
+}
+.FooterItemsLogo,
+.FooterItemsListPage,
+.FooterItemSocialMedia,
+.FooterItemsPartners {
+    width: 22%;
+    min-width: 250px;
+}
+.FooterItemsLogo {
+    display: flex;
+    justify-content: center;
+}
+#logoKanariaFooter {
+    width: 163px;
+}
+.FooterItemsListPage {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ListPageItem {
+    width: 48%;
+    flex-direction: column;
+}
+.link {
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+.link:hover {
+    color: rgba(255, 205, 3, 1); 
+}
+.FooterItemsPartners {
+    flex-direction: column;
+}
+.FooterItemSocialMedia {
+    flex-direction: column;
+}
+.socialNetworkicon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.SociallogoFooter {
+    width: 25px;
+    color: whitesmoke;
+}
+@media only screen and (max-width: 600px) {
+    .Footercontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .FooterItemsListPage,
+    .FooterItemsLogo,
+    .FooterItemSocialMedia,
+    .FooterItemsPartners {
+        margin-bottom: 25px;
+    }
+}

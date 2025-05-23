@@ -1,0 +1,243 @@
+.accounts-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.accounts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.accounts-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.add-user-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #FFCF17;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-user-btn:hover {
+    background-color: #00382c;
+    color: white;
+}
+
+.users-table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle; /* Assure que le contenu est centré verticalement */
+}
+
+.users-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+}
+
+.users-table tr:last-child td {
+    border-bottom: none;
+}
+
+.users-table tr:hover td {
+    background-color: #f5f5f5;
+}
+
+/* Style pour la colonne d'actions */
+.actions-col {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 100%;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.role-super-admin {
+    background-color: #FFCF17;
+    color: #333;
+}
+
+.role-admin {
+    background-color: #e9ecef;
+    color: #555;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.edit-btn {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.edit-btn:hover:not(:disabled) {
+    background-color: #ced4da;
+}
+
+.password-btn {
+    background-color: #FFCF17;
+    color: #333;
+}
+
+.password-btn:hover:not(:disabled) {
+    background-color: #e0b613;
+}
+
+.del-btn {
+    background-color: #b02a37;
+    color: #333;
+}
+
+.del-btn:hover {
+    background-color: #f34758;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
+
+.no-users-message {
+    text-align: center;
+    color: #777;
+    padding: 2rem;
+}
+
+/* Styles pour les badges de statut */
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+.status-inactive {
+    background-color: #f8d7da;
+    color: #b02a37;
+}
+
+/* Style pour les utilisateurs inactifs */
+.inactive-user td {
+    opacity: 0.7;
+}
+
+/* Style pour les boutons d'activation/désactivation */
+.activate-btn {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+.activate-btn:hover:not(:disabled) {
+    background-color: #9fd5b9;
+}
+
+.deactivate-btn {
+    background-color: #f8d7da;
+    color: #b02a37;
+}
+
+.deactivate-btn:hover:not(:disabled) {
+    background-color: #f1aeb5;
+}
+
+/* Style pour le bouton de réinitialisation de mot de passe */
+.reset-btn {
+    background-color: #e2e3e5;
+    color: #495057;
+}
+
+.reset-btn:hover:not(:disabled) {
+    background-color: #c4c6c9;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .accounts-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .users-table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .accounts-page {
+        padding: 1rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 0.75rem;
+    }
+
+    .action-btn {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .users-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

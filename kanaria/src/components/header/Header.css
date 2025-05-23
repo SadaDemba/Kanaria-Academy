@@ -1,0 +1,361 @@
+.header {
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+/* Navigation améliorée */
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+    cursor: pointer;
+}
+
+.liens {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.liens::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFCF17;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.liens:hover::before,
+.liens.active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.liens:hover {
+    text-decoration: none;
+    color: #FFCF17;
+}
+
+.liens::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFCF17;
+    /* Utilise la couleur jaune du bouton de connexion */
+    transition: width 0.3s ease;
+}
+
+
+.liens:hover::after,
+.liens.active::after {
+    width: 100%;
+}
+
+
+#logoKanaria {
+    height: 50px;
+    width: 50px;
+    margin-top: -2.5%;
+}
+
+/* Section utilisateur */
+.user-section {
+    position: relative;
+}
+
+/* Style de l'avatar */
+.user-avatar {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.user-avatar:hover {
+    transform: scale(1.05);
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFCF17;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.avatar-circle:hover {
+    background-color: #cfa913;
+}
+
+/* Dropdown menu */
+.user-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.user-greeting {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.user-email {
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+    word-break: break-all;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 0;
+}
+
+.d-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-size: 14px;
+}
+
+.dropdown-item svg {
+    margin-right: 10px;
+    width: 16px;
+    color: #666;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.logout-item {
+    color: #e53935;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-item svg {
+    color: #e53935;
+}
+
+.logout-item:hover {
+    background-color: #efbfc6;
+}
+
+/* Boutons d'authentification (quand non connecté) */
+.auth-buttons {
+    display: flex;
+}
+
+.login-btn {
+    background-color: #FFCF17;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #cfa913;
+}
+
+/* Styles pour le menu déroulant de navigation */
+.dropdown-nav-item {
+    position: relative;
+}
+
+.dropdown-nav-btn {
+    background: none;
+    border: none;
+    width: fit-content;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-icon {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.dropdown-icon.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 150%;
+    left: 0;
+    background-color: #00382c;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 0.5rem 0;
+    margin: 0;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-nav-menu li {
+    padding: 0;
+    margin: 0;
+
+}
+
+.dropdown-nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: flex;
+    transition: all 0.2s;
+    margin: 0;
+    position: relative;
+}
+
+.dropdown-nav-menu a:hover,
+.dropdown-nav-menu a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFCF17;
+}
+
+.dropdown-nav-menu a.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #FFCF17;
+}
+
+/* Suppression du style pour l'élément admin-menu-item qui n'est plus utilisé */
+.admin-menu-item {
+    display: none;
+}
+
+/* Media queries pour la responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .user-section {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .liens {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,425 @@
+/* formsPage.css */
+.forms-dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+}
+
+.dashboard-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: none;
+}
+
+.btn svg {
+    margin-right: 0.5rem;
+}
+
+.forms-dashboard .btn-primary,
+.dashboard-actions .btn-primary,
+.empty-state .btn-primary {
+    background-color: rgba(255, 205, 3, 1);
+    color: #222;
+}
+
+.forms-dashboard .btn-primary:hover,
+.dashboard-actions .btn-primary:hover,
+.empty-state .btn-primary:hover {
+    background-color: #00382c;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-info {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn-sm {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.875rem;
+}
+
+/* Filtres et recherche */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.search-box {
+    position: relative;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.filter-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Table des formulaires */
+.forms-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.forms-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.forms-table th {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #444;
+    border-bottom: 2px solid #eee;
+}
+
+.forms-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.forms-table tr:hover {
+    background-color: #bec5b5d4;
+}
+
+.forms-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Statut */
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+}
+
+.status-active {
+    background-color: rgba(76, 175, 80, 0.15);
+    color: #2e7d32;
+}
+
+.status-inactive {
+    background-color: rgba(244, 67, 54, 0.15);
+    color: #c62828;
+}
+
+/* Actions */
+.actions-cell {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* État vide */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.empty-state-text {
+    margin-bottom: 1.5rem;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.page-item {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.page-item.active {
+    background-color: rgba(255, 205, 3, 1);
+    color: #222;
+}
+
+.page-item:hover:not(.active) {
+    background-color: #e0e0e0;
+}
+
+/* Styles pour le dropdown amélioré */
+.actions-cell {
+    position: relative;
+    text-align: center;
+}
+
+.dropdown-container {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-toggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: background-color 0.2s;
+}
+
+.dropdown-toggle:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    z-index: 100;
+    /* Valeur élevée pour s'assurer qu'il apparaît au-dessus */
+    overflow: visible;
+    border: 1px solid #eaeaea;
+}
+
+/* Triangle pointant vers le haut pour indiquer la relation */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 13px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    z-index: 2;
+}
+
+/* Ombre du triangle */
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #333;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f8;
+}
+
+.delete-item {
+    color: #d32f2f;
+}
+
+.delete-item:hover {
+    background-color: rgba(211, 47, 47, 0.1);
+}
+/* Ajoutez ces styles pour s'assurer que le dropdown apparaît à l'extérieur de la cellule */
+.forms-table-container {
+    overflow: visible;
+    /* Changer overflow à visible */
+}
+
+.forms-table {
+    width: 100%;
+    border-collapse: separate;
+    /* Changer de collapse à separate */
+    border-spacing: 0;
+    /* Assurer qu'il n'y a pas d'espaces entre les cellules */
+    position: relative;
+    /* Pour le contexte de positionnement */
+}
+
+.actions-cell {
+    position: static;
+    /* Modifier à static pour que le contexte de position soit la table */
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 180px;
+    z-index: 9999;
+    /* Valeur très élevée */
+}
+
+/* Pour s'assurer que le dropdown est bien visible sur les appareils mobiles */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: absolute;
+        right: 0;
+        left: auto;
+        width: 180px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .forms-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .forms-dashboard {
+        padding: 1rem;
+    }
+
+    .actions-cell {
+        flex-direction: column;
+    }
+}

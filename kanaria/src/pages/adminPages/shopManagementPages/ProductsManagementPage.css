@@ -1,0 +1,274 @@
+.products-management-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.management-header h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.filters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.search-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-input-container {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-btn {
+    background-color: #FFCF17;
+    border: none;
+    color: white;
+    width: 35px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.search-btn:hover {
+    background-color: #00382c;
+    color: white;
+}
+
+.category-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.category-filter label {
+    color: #555;
+    font-weight: 500;
+}
+
+.category-select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    min-width: 200px;
+}
+
+.category-select:focus {
+    outline: none;
+    border-color: #FFCF17;
+}
+
+.products-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.products-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+}
+
+.products-table tr:last-child td {
+    border-bottom: none;
+}
+
+.products-table tr:hover td {
+    background-color: #f5f5f5;
+}
+
+.image-column {
+    width: 80px;
+}
+
+.product-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.no-thumbnail {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #888;
+    text-align: center;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-badge.active {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+.status-badge.inactive {
+    background-color: #f8d7da;
+    color: #b02a37;
+}
+
+.action-col {
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-btn {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.view-btn:hover {
+    background-color: #ced4da;
+}
+
+.edit-btn {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+.edit-btn:hover {
+    background-color: #ffecb5;
+}
+
+.delete-btn {
+    background-color: #f8d7da;
+    color: #b02a37;
+}
+
+.delete-btn:hover {
+    background-color: #f1aeb5;
+}
+
+.no-products {
+    text-align: center;
+    padding: 3rem;
+}
+
+.add-first-product {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #FFCF17;
+    color: #00382c;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.add-first-product:hover {
+    background-color: #00382c;
+    color: white;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #b02a37;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .management-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

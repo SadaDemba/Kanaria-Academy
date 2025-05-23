@@ -1,0 +1,165 @@
+.container {
+    width: 100%;
+    max-width: 1960px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HeroHeader {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+}
+.HeroHeaderContainer {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#HeroImage {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 520px;
+    object-position: center;
+}
+.Herotxt {
+    color: #fafafa;
+    font-size: 3rem;
+    font-weight: bolder;
+    max-width: 55%;
+    align-self: center;
+}
+.whatsNew,
+.Roster {
+    color: black;
+    margin-top: 3rem;
+    width: 80%;
+    max-width: 1280px;
+}
+.whatsNewTitle,
+.RosterTitle {
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0em;
+    text-align: left;
+}
+hr {
+    height: 4px;
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+}
+.en-savoir-plus-button,
+.en-savoir-plus-button-about {
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.en-savoir-plus-button {
+    color: whitesmoke;
+    float: right;
+    border: none;
+}
+.en-savoir-plus-button-about {
+    color: black;
+    margin-top: 30px;
+}
+.en-savoir-plus-button:hover,
+.en-savoir-plus-button-about:hover {
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+}
+.arrow {
+    margin-left: 5px;
+    font-weight: 900;
+}
+.AboutContainer {
+    width: 100%;
+    margin-top: -150px;
+    z-index: 6;
+}
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: rgba(255, 205, 3, 0.54) 0px 3px 8px;
+    z-index: 10;
+    position: sticky;
+}
+.about-content-text {
+    width: 100%;
+    max-width: 650px;
+}
+.about-content-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#Kanaria_logo_hero_landingpage {
+    width: 80%;
+}
+.Contacts {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 205, 3, 0.54);
+    margin-top: 100px;
+}
+.ContactsContents {
+    width: 70%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    height: 160px;
+}
+.about {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.titleAbout {
+    margin-bottom: 20px;
+}
+.textabout {
+    margin-bottom: 15px;
+}
+@media only screen and (max-width: 600px) {
+    .HeroHeader {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .Herotxt {
+        max-width: 100%;
+        text-align: center;
+    }
+    .about {
+        text-align: center;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-content-img {
+        margin-top: 20px;
+    }
+}

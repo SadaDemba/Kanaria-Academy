@@ -1,0 +1,77 @@
+/* Ajoutez ces styles dans un fichier CSS global ou dans le fichier dédié aux notifications */
+
+/* Style de base pour toutes les notifications */
+.Toastify__toast {
+    opacity: 0.9 !important;
+    /* Semi-transparence générale */
+    backdrop-filter: blur(3px) !important;
+    /* Effet de flou pour améliorer la lisibilité */
+    transition: opacity 0.3s ease !important;
+    /* Transition douce */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+/* Augmenter l'opacité au survol pour une meilleure lisibilité si nécessaire */
+.Toastify__toast:hover {
+    opacity: 0.98 !important;
+}
+
+/* Styles spécifiques pour chaque type de notification avec transparence */
+.Toastify__toast--success {
+    background-color: rgba(230, 255, 230, 0.9) !important;
+    /* vert transparent */
+    color: rgba(0, 119, 0, 1) !important;
+    /* texte vert foncé */
+    border-left: 5px solid rgba(0, 119, 0, 0.8) !important;
+}
+
+.Toastify__toast--error {
+    background-color: rgba(255, 230, 230, 0.9) !important;
+    /* rouge transparent */
+    color: rgba(204, 0, 0, 1) !important;
+    /* texte rouge */
+    border-left: 5px solid rgba(204, 0, 0, 0.8) !important;
+}
+
+.Toastify__toast--warning {
+    background-color: rgba(255, 248, 230, 0.9) !important;
+    /* jaune transparent */
+    color: rgba(138, 109, 59, 1) !important;
+    /* texte brun */
+    border-left: 5px solid rgba(240, 173, 78, 0.8) !important;
+}
+
+.Toastify__toast--info {
+    background-color: rgba(230, 247, 255, 0.9) !important;
+    /* bleu transparent */
+    color: rgba(49, 112, 143, 1) !important;
+    /* texte bleu */
+    border-left: 5px solid rgba(91, 192, 222, 0.8) !important;
+}
+
+/* Amélioration du bouton de fermeture */
+.Toastify__close-button {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 15px !important;
+    opacity: 0.7 !important;
+    color: inherit !important;
+}
+
+.Toastify__close-button:hover {
+    opacity: 1 !important;
+}
+
+/* S'assurer que le contenu est bien lisible malgré la transparence */
+.Toastify__toast-body {
+    font-weight: 500 !important;
+    /* Légèrement plus bold pour améliorer la lisibilité */
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5) !important;
+    /* Léger halo blanc */
+}

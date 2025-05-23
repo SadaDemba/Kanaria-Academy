@@ -1,0 +1,65 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    display: none;
+    margin: 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+    padding: 20px;
+    color: white;
+}
+.text {
+    display: none;
+}
+.slide.active {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    align-items: center; /* Centre les images verticalement */
+    flex-direction: column;
+}
+.text.active {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.slide img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur du carousel */
+    max-height: 450px; /* Taille maximale de l'image */
+    border-radius: 20px;
+}
+
+.arrow {
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, #00382c 0%, #006b54 56.77%);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 2;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 150px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
