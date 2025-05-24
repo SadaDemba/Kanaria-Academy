@@ -19,8 +19,14 @@ Le projet est organisé en deux sous-dossiers principaux :
 
 - Node.js (v14.x ou supérieur)
 - npm ou yarn
-- MongoDB (pour la base de données)
+- SQL Server (pour la base de données)
 - Git
+### Pour le déploiement
+- Azure blob storage pour les images
+- Azure SQL Server (une bdd pour les données principale et une autre shadow pour les données de migration avec Prisma
+- Azure container apps pour déployer les deux applications (back et front) sur des conteneurs.
+- Azure Container Registry pour garder les images de nos conteneurs
+
 
 ## Installation
 
