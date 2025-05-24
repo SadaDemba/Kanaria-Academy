@@ -21,16 +21,18 @@ Le projet est organisé en deux sous-dossiers principaux :
 - npm ou yarn
 - SQL Server (pour la base de données)
 - Git
-### Pour le déploiement
-- Azure blob storage pour les images
-- Azure SQL Server (une bdd pour les données principale et une autre shadow pour les données de migration avec Prisma
-- Azure container apps pour déployer les deux applications (back et front) sur des conteneurs.
-- Azure Container Registry pour garder les images de nos conteneurs
 
+### Pour le déploiement
+
+- Azure blob storage pour les images
+- Azure SQL Server (une bdd pour les données principales et une autre shadow pour les données de migration avec Prisma)
+- Azure container apps pour déployer les deux applications (back et front) sur des conteneurs
+- Azure Container Registry pour garder les images de nos conteneurs
 
 ## Installation
 
 ### Clonage du dépôt
+
 ```bash
 git clone https://github.com/SadaDemba/Kanaria-Academy.git
 cd Kanaria-Academy
@@ -49,8 +51,7 @@ cp .env.example .env
 
 #### Variables d'environnement backend
 
-# Créer et configurer le fichier .env
-cp .env.example .env
+Créez un fichier `.env` dans le dossier `kanaria-api` en vous basant sur l'exemple fourni.
 
 ### Configuration du Frontend (kanaria)
 
@@ -92,20 +93,21 @@ L'application frontend sera accessible à l'adresse <http://localhost:3000> et l
 
 ## Fonctionnalités principales
 
-- Authentification et gestion des utilisateurs
-- Création et gestion de cours
-- Suivi de progression des apprenants
-- Interface administrative
-- Système de messagerie intégré
+- Authentification et gestion des utilisateurs (SUPER_ADMIN et ADMIN)
+- Création et gestion de formulaires personnalisables avec différents types de champs
+- Gestion des réponses aux formulaires avec statut de lecture
+- Boutique en ligne avec gestion de produits et catégories
+- Interface administrative pour gérer l'ensemble du système
 
 ## Structure des API
 
 Le backend expose plusieurs endpoints API, notamment :
 
-- `/api/auth` : Authentification et gestion des utilisateurs
-- `/api/courses` : Gestion des cours
-- `/api/lessons` : Gestion des leçons
-- `/api/users` : Gestion des utilisateurs
+- `/auth` : Authentification (login, signup)
+- `/users` : Gestion des utilisateurs (admin)
+- `/forms` : Création et gestion de formulaires personnalisables
+- `/form-responses` : Gestion des réponses aux formulaires
+- `/shop` : Gestion de la boutique (produits, catégories, images)
 
 ## Déploiement
 
@@ -113,13 +115,13 @@ Instructions pour déployer l'application en production :
 
 1. Construire le frontend :
 
-```bash
-cd kanaria
-npm run build
-```
+    ```bash
+    cd kanaria
+    npm run build
+    ```
 
-1. Configurer les variables d'environnement pour la production
-2. Déployer le backend et le frontend sur vos serveurs
+2. Configurer les variables d'environnement pour la production
+3. Déployer le backend et le frontend sur vos serveurs
 
 ## Contribution
 
