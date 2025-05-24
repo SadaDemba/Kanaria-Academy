@@ -2,7 +2,11 @@
 
 ## Description du projet
 
-Kanaria Academy est une plateforme d'apprentissage complète qui intègre une application frontend en React.js et un backend en Node.js. Cette solution offre des fonctionnalités d'enseignement en ligne, de gestion des cours et d'interaction entre apprenants et formateurs.
+Kanaria Academy est la plateforme académique de Kanaria, une association créée dans le cadre de nos projets d'école (Ydays) à Ynov Campus. Le but est de mettre en place une équipe académique d'e-sport en sélectionnant parmi les élèves de Ynov les plus talentueux et désireux de faire partie de l'équipe. Cette équipe sera entraînée et l'équipe première pourra sélectionner parmi les joueurs des éléments qui vont passer dans l'équipe première et participer à la compétition EVA.
+
+Cette plateforme permet de créer des formulaires flexibles -- avec tous types de champs dont du texte court, du texte long, des nombres, des choix multiples ou uniques, etc., avec des paramètres configurables tels que le nombre de caractères ou l'obligation ou non du champ -- de les publier, et de consulter les réponses.
+
+Elle contient aussi une boutique en ligne ainsi qu'une gestion des comptes utilisateurs, pour l'administration, intégrée.
 
 ## Structure du projet
 
